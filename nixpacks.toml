@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python310", "playwright"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt", "playwright install"]
+
+[phases.start]
+cmd = "python aviso_bot.py"

@@ -1,0 +1,7 @@
+services:
+  - type: worker
+    name: aviso-surf-bot
+    env: python
+    buildCommand: pip install -r requirements.txt && playwright install
+    startCommand: python aviso_bot.py
+    autoDeploy: false
