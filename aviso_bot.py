@@ -40,13 +40,12 @@ def run_bot():
                     page.wait_for_selector("button.confirm_task", timeout=10000)
                     page.click("button.confirm_task")  # Подтвердить просмотр
                     print("Просмотр подтверждён")
-
                     time.sleep(3)
-                    break  # Переход к следующей итерации
+                    break
 
                 except Exception as e:
                     print(f"Ошибка при выполнении задания: {e}")
-                    break  # Обновим страницу
+                    break
 
         browser.close()
 
